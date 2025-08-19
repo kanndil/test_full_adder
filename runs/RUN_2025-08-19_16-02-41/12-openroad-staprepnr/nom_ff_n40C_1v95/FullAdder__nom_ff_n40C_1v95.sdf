@@ -1,0 +1,87 @@
+(DELAYFILE
+ (SDFVERSION "3.0")
+ (DESIGN "FullAdder")
+ (DATE "Tue Aug 19 16:02:43 2025")
+ (VENDOR "Parallax")
+ (PROGRAM "STA")
+ (VERSION "2.6.0")
+ (DIVIDER .)
+ (VOLTAGE 1.950::1.950)
+ (PROCESS "1.000::1.000")
+ (TEMPERATURE -40.000::-40.000)
+ (TIMESCALE 1ns)
+ (CELL
+  (CELLTYPE "FullAdder")
+  (INSTANCE)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT a_i _5_.B (0.032:0.032:0.032) (0.012:0.012:0.012))
+    (INTERCONNECT a_i _6_.B (0.032:0.032:0.032) (0.012:0.012:0.012))
+    (INTERCONNECT b_i _5_.A (0.034:0.034:0.034) (0.013:0.013:0.013))
+    (INTERCONNECT b_i _6_.A (0.034:0.034:0.034) (0.013:0.013:0.013))
+    (INTERCONNECT cin_i _4_.A (0.034:0.034:0.034) (0.013:0.013:0.013))
+    (INTERCONNECT cin_i _7_.A (0.034:0.034:0.034) (0.013:0.013:0.013))
+    (INTERCONNECT _3_.Y cout_o (0.000:0.000:0.000))
+    (INTERCONNECT _4_.Y _3_.A1 (0.000:0.000:0.000))
+    (INTERCONNECT _5_.Y _3_.B1 (0.000:0.000:0.000))
+    (INTERCONNECT _6_.Y _3_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _6_.Y _7_.B (0.000:0.000:0.000))
+    (INTERCONNECT _7_.Y sum_o (0.000:0.000:0.000))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "sky130_fd_sc_hd__o21ai_2")
+  (INSTANCE _3_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 Y (0.237:0.237:0.237) (0.081:0.081:0.081))
+    (IOPATH A2 Y (0.233:0.235:0.237) (0.088:0.096:0.104))
+    (IOPATH B1 Y (0.115:0.116:0.116) (0.064:0.065:0.066))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "sky130_fd_sc_hd__inv_2")
+  (INSTANCE _4_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A Y (0.029:0.029:0.029) (0.020:0.020:0.020))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "sky130_fd_sc_hd__nand2_2")
+  (INSTANCE _5_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A Y (0.033:0.033:0.033) (0.027:0.027:0.027))
+    (IOPATH B Y (0.040:0.040:0.040) (0.032:0.032:0.032))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "sky130_fd_sc_hd__xnor2_2")
+  (INSTANCE _6_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A Y (0.095:0.095:0.095) (0.101:0.101:0.101))
+    (IOPATH A Y (0.153:0.153:0.153) (0.059:0.059:0.059))
+    (IOPATH B Y (0.091:0.091:0.091) (0.092:0.092:0.092))
+    (IOPATH B Y (0.136:0.136:0.136) (0.053:0.053:0.053))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "sky130_fd_sc_hd__xnor2_2")
+  (INSTANCE _7_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A Y (0.147:0.147:0.147) (0.144:0.144:0.144))
+    (IOPATH A Y (0.276:0.276:0.276) (0.102:0.102:0.102))
+    (IOPATH B Y (0.145:0.149:0.152) (0.144:0.146:0.148))
+    (IOPATH B Y (0.267:0.268:0.270) (0.098:0.106:0.114))
+   )
+  )
+ )
+)

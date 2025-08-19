@@ -1,0 +1,43 @@
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /workspace/test_full_adder/runs/RUN_2025-08-19_16-02-41/tmp/7d0044c6121148b1929e6f35565cd6fb.lib ",
+   "modules": {
+      "\\FullAdder": {
+         "num_wires":         8,
+         "num_wire_bits":     8,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 5,
+         "num_ports":         5,
+         "num_port_bits":     5,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1,
+            "$_AND_": 1,
+            "$_OR_": 1,
+            "$_XNOR_": 2
+         }
+      }
+   },
+      "design": {
+         "num_wires":         8,
+         "num_wire_bits":     8,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 5,
+         "num_ports":         5,
+         "num_port_bits":     5,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1,
+            "$_AND_": 1,
+            "$_OR_": 1,
+            "$_XNOR_": 2
+         }
+      }
+}
+

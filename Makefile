@@ -15,7 +15,7 @@ VERILATOR = verilator
 YOSYS = yosys
 
 # Default target
-all: lint simulate synthesize
+all: lint simulate synthesize openlane
 
 # Lint the Verilog code
 lint:
@@ -45,6 +45,12 @@ synthesize:
 	$(YOSYS) -s synth.ys
 	@echo "✅ Synthesis completed - output: $(TOP_MODULE)_synth.v"
 
+# Run OpenLane ASIC flow
+openlane:
+	@echo "=== Running OpenLane ASIC flow ==="
+	openlane config.json
+	@echo "✅ OpenLane flow completed"
+
 # Generate waveforms (VCD)
 waves: $(TESTBENCH)
 	@echo "=== Generating waveforms ==="
@@ -54,16 +60,18 @@ waves: $(TESTBENCH)
 # Clean generated files
 clean:
 	rm -f $(TESTBENCH) *.vcd *.ys *_synth.v
+	rm -rf runs/
 
 # Show help
 help:
 	@echo "Available targets:"
-	@echo "  all        - Run lint, simulate, and synthesize"
+	@echo "  all        - Run lint, simulate, synthesize, and openlane"
 	@echo "  lint       - Lint Verilog code with Verilator"
 	@echo "  simulate   - Run testbench simulation"
 	@echo "  synthesize - Synthesize design with Yosys"
+	@echo "  openlane   - Run complete ASIC implementation flow"
 	@echo "  waves      - Generate VCD waveforms"
 	@echo "  clean      - Remove generated files"
 	@echo "  help       - Show this help message"
 
-.PHONY: all lint simulate synthesize waves clean help
+.PHONY: all lint simulate synthesize openlane waves clean help

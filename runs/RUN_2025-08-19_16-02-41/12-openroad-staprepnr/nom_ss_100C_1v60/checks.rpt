@@ -1,0 +1,80 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_ss_100C_1v60 Corner ===================================
+
+Startpoint: b_i (input port clocked by __VIRTUAL_CLK__)
+Endpoint: sum_o (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  2.000000    2.000000 v input external delay
+     2    0.012761    0.059650    0.039619    2.039619 v b_i (in)
+                                                         b_i (net)
+                      0.059650    0.000000    2.039619 v _6_/A (sky130_fd_sc_hd__xnor2_2)
+     2    0.012386    0.163744    0.283847    2.323467 v _6_/Y (sky130_fd_sc_hd__xnor2_2)
+                                                         _2_ (net)
+                      0.163744    0.000000    2.323467 v _7_/B (sky130_fd_sc_hd__xnor2_2)
+     1    0.033442    0.709781    0.627587    2.951053 ^ _7_/Y (sky130_fd_sc_hd__xnor2_2)
+                                                         sum_o (net)
+                      0.709781    0.000000    2.951053 ^ sum_o (out)
+                                              2.951053   data arrival time
+
+                      0.000000   10.000000   10.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000   10.000000   clock network delay (ideal)
+                                 -0.250000    9.750000   clock uncertainty
+                                  0.000000    9.750000   clock reconvergence pessimism
+                                 -2.000000    7.750000   output external delay
+                                              7.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              7.750000   data required time
+                                             -2.951053   data arrival time
+---------------------------------------------------------------------------------------------
+                                              4.798946   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_ss_100C_1v60 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_ss_100C_1v60 Corner ===================================
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 8 unannotated drivers.
+ a_i
+ b_i
+ cin_i
+ _3_/Y
+ _4_/Y
+ _5_/Y
+ _6_/Y
+ _7_/Y
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
