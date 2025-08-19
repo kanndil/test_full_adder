@@ -1,0 +1,6 @@
+read_verilog FullAdder.v
+hierarchy -top FullAdder
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+stat
+write_verilog FullAdder_synth.v
